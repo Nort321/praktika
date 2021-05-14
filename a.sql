@@ -1,3 +1,15 @@
+DROP TABLE IF EXISTS "data.metric";
+DROP TABLE IF EXISTS "data.collect";
+DROP TABLE IF EXISTS "data.account";
+DROP TABLE IF EXISTS "data.session";
+DROP TABLE IF EXISTS "data.node";
+DROP TABLE IF EXISTS "data.map";
+DROP TABLE IF EXISTS "data.permission";
+DROP TABLE IF EXISTS "data.sample";
+DROP TABLE IF EXISTS "data.agent";
+DROP TABLE IF EXISTS "data.link";
+
+
 CREATE TABLE "data.metric"(
     "id" INTEGER NOT NULL,
     "name" VARCHAR(255) NOT NULL,

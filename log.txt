@@ -1,0 +1,122 @@
+2021-05-14 09:38:27.485 MSK [2217] LOG:  starting PostgreSQL 13.2 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.2.1_pre1) 10.2.1 20201203, 64-bit
+2021-05-14 09:38:27.486 MSK [2217] LOG:  listening on IPv6 address "::1", port 5432
+2021-05-14 09:38:27.486 MSK [2217] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-05-14 09:38:27.492 MSK [2217] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-05-14 09:38:27.500 MSK [2218] LOG:  database system was shut down at 2021-05-14 09:36:47 MSK
+2021-05-14 09:38:27.504 MSK [2217] LOG:  database system is ready to accept connections
+2021-05-14 09:38:48.902 MSK [2226] ERROR:  syntax error at or near "a" at character 1
+2021-05-14 09:38:48.902 MSK [2226] STATEMENT:  a.sql
+	;
+2021-05-14 09:40:07.754 MSK [2247] ERROR:  relation "data.metric" does not exist at character 15
+2021-05-14 09:40:07.754 MSK [2247] STATEMENT:  SELECT * FROM data.metric;
+2021-05-14 09:46:22.583 MSK [2247] ERROR:  relation "data.metric" does not exist at character 15
+2021-05-14 09:46:22.583 MSK [2247] STATEMENT:  SELECT * FROM data.metric;
+2021-05-14 09:46:53.677 MSK [2247] ERROR:  relation "data.map" does not exist at character 15
+2021-05-14 09:46:53.677 MSK [2247] STATEMENT:  SELECT * FROM data.map;
+2021-05-14 10:08:55.009 MSK [2539] ERROR:  syntax error at or near "TO" at character 28
+2021-05-14 10:08:55.009 MSK [2539] STATEMENT:  ALTER DATABASE prak RANAME TO db;
+2021-05-14 10:14:07.175 MSK [2539] ERROR:  schema "data" does not exist
+2021-05-14 10:14:07.175 MSK [2539] STATEMENT:  DROP TABLE data.account;
+2021-05-14 10:14:21.885 MSK [2539] ERROR:  table "public" does not exist
+2021-05-14 10:14:21.885 MSK [2539] STATEMENT:  DROP TABLE public;
+2021-05-14 10:16:08.577 MSK [2539] ERROR:  syntax error at or near "*" at character 22
+2021-05-14 10:16:08.577 MSK [2539] STATEMENT:  DROP TABLE IF EXISTS *;
+2021-05-14 10:16:29.320 MSK [2539] ERROR:  schema "data" does not exist
+2021-05-14 10:16:29.320 MSK [2539] STATEMENT:  DROP SCHEMA data;
+2021-05-14 10:16:37.832 MSK [2539] ERROR:  syntax error at or near "." at character 17
+2021-05-14 10:16:37.832 MSK [2539] STATEMENT:  DROP SCHEMA data.map;
+2021-05-14 10:17:01.200 MSK [2217] LOG:  received fast shutdown request
+2021-05-14 10:17:01.205 MSK [2217] LOG:  aborting any active transactions
+2021-05-14 10:17:01.206 MSK [2217] LOG:  background worker "logical replication launcher" (PID 2224) exited with exit code 1
+2021-05-14 10:17:01.206 MSK [2219] LOG:  shutting down
+2021-05-14 10:17:01.223 MSK [2217] LOG:  database system is shut down
+2021-05-14 10:17:08.340 MSK [2629] LOG:  starting PostgreSQL 13.2 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.2.1_pre1) 10.2.1 20201203, 64-bit
+2021-05-14 10:17:08.341 MSK [2629] LOG:  listening on IPv6 address "::1", port 5432
+2021-05-14 10:17:08.341 MSK [2629] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-05-14 10:17:08.346 MSK [2629] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-05-14 10:17:08.356 MSK [2630] LOG:  database system was shut down at 2021-05-14 10:17:01 MSK
+2021-05-14 10:17:08.360 MSK [2629] LOG:  database system is ready to accept connections
+2021-05-14 13:21:27.017 MSK [4516] ERROR:  cannot reassign ownership of objects owned by role postgres because they are required by the database system
+2021-05-14 13:21:27.017 MSK [4516] STATEMENT:  REASSIGN OWNED BY postgres TO myuser;
+2021-05-14 13:23:57.660 MSK [4547] ERROR:  cannot reassign ownership of objects owned by role postgres because they are required by the database system
+2021-05-14 13:23:57.660 MSK [4547] STATEMENT:  REASSIGN OWNED BY postgres TO myuser;
+2021-05-14 13:29:22.265 MSK [4674] FATAL:  database "datname" does not exist
+2021-05-14 14:15:17.168 MSK [5441] FATAL:  database "bd" does not exist
+2021-05-14 14:15:24.132 MSK [5445] ERROR:  column "secret" of relation "data.account" does not exist at character 39
+2021-05-14 14:15:24.132 MSK [5445] STATEMENT:  INSERT INTO "data.account" (id, name, secret) VALUES
+	(1, 'user1', 'password'),
+	(2, 'user2', 'password');
+2021-05-14 14:15:24.136 MSK [5445] ERROR:  null value in column "agent_pkey" of relation "data.agent" violates not-null constraint
+2021-05-14 14:15:24.136 MSK [5445] DETAIL:  Failing row contains (1, PNWWARKMYPUL                                                    ..., agent1, null, null).
+2021-05-14 14:15:24.136 MSK [5445] STATEMENT:  INSERT INTO "data.agent" (id, key, name) VALUES
+	(1, 'PNWWARKMYPUL', 'agent1'),
+	(2, 'YPIHISUYLAQEVSZI', 'spbkit agent');
+2021-05-14 14:15:24.144 MSK [5445] ERROR:  null value in column "link_pkey" of relation "data.link" violates not-null constraint
+2021-05-14 14:15:24.144 MSK [5445] DETAIL:  Failing row contains (1, 1, 2, null, null, null).
+2021-05-14 14:15:24.144 MSK [5445] STATEMENT:  INSERT INTO "data.link" (id, node_a, node_b) VALUES
+	(1, 1, 2),
+	(2, 2, 3),
+	(4, 6, 7),
+	(5, 8, 9),
+	(6, 8, 10);
+2021-05-14 14:15:24.147 MSK [5445] ERROR:  syntax error at or near "map3" at character 91
+2021-05-14 14:15:24.147 MSK [5445] STATEMENT:  INSERT INTO "data.map" (id, account, name) VALUES
+	(1, 1, 'map1'),
+	(2, 1, 'map2,),
+	(3, 2, 'map3'),
+	(4, 2, 'map4'),
+	(5, 2, 'spbkit network');
+	INSERT INTO "data.metric" (id, name, vmin, vmax, unit, snmp_oid, agnt_scale) VALUES
+	(1, 'cpu0', 0, 100, '%', '1.3.6.1.2.1.25.3.3.1.2.1', 1),
+	(2, 'cpu1', 0, 100, '%', '1.3.6.1.2.1.25.3.3.1.2.2', 1),
+	(3, 'memory', 0, , 'mb', '1.3.6.1.2.1.25.2.3.1.6.65536', 0.001),
+	(4, 'voltage', 0, , 'v', '1.3.6.1.4.1.14988.1.1.3.8.0', 0.1),
+	(5, 'temp', , , 'c', '1.3.6.1.4.1.14988.1.1.3.10.0', 0.1),
+	(6, 'cpu-temp', , , 'c', '1.3.6.1.4.1.14988.1.1.3.11.0', 0.1);
+	INSERT INTO "data.node" (id, map, x, y, ip, name, agent) VALUES
+	(1, 1, 632, 284, '192.168.35.101', 'host1', 1),
+	(2, 1, 742, 767, '192.168.35.102', 'host2', 1),
+	(3, 1, 426, 887, '192.168.35.103', 'host3', 1),
+	(5, 2, 107, 662, '192.168.35.105', 'host5', 1),
+	(6, 3, 90, 40, '192.168.35.106', 'host6', 1),
+	(7, 3, 40, 90, '192.168.35.107', 'host7', 1),
+	(8, 4, 20, 40, '192.168.35.108', 'host8', 1),
+	(9, 4, 70, 30, '192.168.35.109', 'host9', 1);
+	INSERT INTO "data.permission" (account, func) VALUES
+	(1, 'open_session'),
+	(1, 'close_session'),
+	(1, 'get_maps'),
+	(1, 'get_nodes'),
+	(1, 'get_links'),
+	(1, 'delete_map'),
+	(1, 'delete_node'),
+	(1, 'delete_node');
+	INSERT INTO "data.sample" (ts, node, metric, value) VALUES
+	('2021-05-11 23:52:32.180975', 12, 1, 0),
+	('2021-05-11 23:52:32.27094', 12, 4, 23.9),
+	('2021-05-12 04:41:08.3895901', 16, 6, 66),
+	('2021-05-12 04:41:09.480588', 11, 3, 45.644),
+	('2021-05-12 04:41:11.563711', 11, 2, 6),
+	('2021-05-12 04:41:11.653017', 16, 3, 28.968),
+	('2021-05-12 04:41:11.730221', 16, 3, 28.986),
+	('2021-05-12 04:41:12.815681', 11, 1, 1);
+	INSERT INTO "data.session" (key, account, t_begin, t_end) VALUES
+	('BEBSVETTPDFASGOM', 1, '2021-05-09 19:40:45.696141', ),
+	('BHSOSQOAIKGJLTSS', 1, '2021-05-09 09:17:55.066723', ),
+	('BWFMKMEQRLCRDOAL', 1, '2021-05-09 17:48:54.460959', ),
+	('BYZQDLIOCNVGMDSH', 1, '2021-05-09 12:34:59.914845', ),
+	('CHPNWPGFAKTTETCJ', 1, '2021-05-09 17:34:11.090809', ),
+	('CICSYGRFGOCOXFFV', 1, '2021-05-09 12:35:12.460811', ),
+	('CNWLOVETSMUYKUDS', 1, '2021-05-09 14:09:50.977107', ),
+	('CPQHERATHVCQGGJQ', 1, '2021-05-09 12:44:41.075449', );
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
